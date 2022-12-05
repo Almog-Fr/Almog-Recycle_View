@@ -5,20 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Ed">
+    tools:context=".Secondary">
 
+    <!-- TODO: Update blank fragment layout -->
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewSecondFrag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:srcCompat="@drawable/ed_big" />
+        android:src="@drawable/ed" />
 
     <TextView
-        android:id="@+id/textViewEd"
+        android:id="@+id/textViewSecondFrag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="TextView"
-        android:textSize="48sp" />
+        android:gravity="center"
+        android:text="@string/hello_blank_fragment" />
+
 </LinearLayout>

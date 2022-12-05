@@ -1,4 +1,5 @@
 package com.example.almogrecycleview;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder>  {
-
+    Context context;
     private ArrayList<DataModel> dataSet;
     private final RecyclerViewInterface recyclerViewInterface;
 
-    public CustomAdapter(ArrayList<DataModel> dataSet,RecyclerViewInterface recyclerViewInterface) {
-
+    public CustomAdapter(Context context,ArrayList<DataModel> dataSet,RecyclerViewInterface recyclerViewInterface) {
+        this.context = context;
         this.dataSet = dataSet;
         this.recyclerViewInterface = recyclerViewInterface;
     }
@@ -42,7 +43,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                        int position = getAdapterPosition();
 
                        if(position != RecyclerView.NO_POSITION){
-                           recyclerViewInterface.onItemClick(position);
+                           View v = view.findViewById(R.id.almogFragmentHolder);
+                           recyclerViewInterface.onItemClick(position,view);
+
                        }
                    }
                }
@@ -56,7 +59,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
 
-        View view = LayoutInflater.from(parent.getContext() ).inflate(R.layout.cards_layout , parent ,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.cards_layout , parent ,false);
 
         MyViewHolder myViewHolder = new MyViewHolder(view,recyclerViewInterface);
 
