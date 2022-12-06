@@ -21,6 +21,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/hello_blank_fragment"
+        android:textColor="#070707"
+        android:textSize="40sp" />
 
 </LinearLayout>
