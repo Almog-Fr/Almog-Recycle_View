@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentResultListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -77,6 +78,16 @@ public class Secondary extends Fragment {
                imgView.setImageDrawable(drawable);
            }
        });
+
+        Button button = view.findViewById(R.id.buttonBack);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.replaceFragment(new Main());
+            }
+        });
 
 
 

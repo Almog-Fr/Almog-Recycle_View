@@ -8,14 +8,14 @@
     <fragment
         android:id="@+id/main"
         android:name="com.example.almogrecycleview.Main"
-        android:label="Main" >
-        <action
-            android:id="@+id/action_main_to_secondary"
-            app:destination="@id/secondary" />
-    </fragment>
+        android:label="Main" />
     <fragment
         android:id="@+id/secondary"
         android:name="com.example.almogrecycleview.Secondary"
         android:label="fragment_secondary"
-        tools:layout="@layout/fragment_secondary" />
+        tools:layout="@layout/fragment_secondary" >
+        <action
+            android:id="@+id/action_secondary_to_main"
+            app:destination="@id/main" />
+    </fragment>
 </navigation>

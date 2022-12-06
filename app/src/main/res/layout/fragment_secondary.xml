@@ -12,17 +12,24 @@
         android:id="@+id/imageViewSecondFrag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:src="@drawable/ed" />
 
     <TextView
         android:id="@+id/textViewSecondFrag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="1.5"
         android:gravity="center"
         android:text="@string/hello_blank_fragment"
         android:textColor="#070707"
         android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:text="Back" />
 
 </LinearLayout>
