@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity{
         replaceFragment(new Main());
     }
 
-    private void replaceFragment(Fragment fragment) {
+    public void replaceFragment(Fragment fragment) {
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.almogFragmentHolder,fragment);
